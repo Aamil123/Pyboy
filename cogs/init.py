@@ -13,7 +13,4 @@ class BotOnReady(commands.Cog):
 
 
 def setup(bot):
-    bot.add_cog(Example(bot))
-    
-        
-        
+    bot.add_cog(BotOnReady(bot))
