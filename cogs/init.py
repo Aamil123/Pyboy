@@ -7,7 +7,7 @@ class BotOnReady(commands.Cog):
         self.bot = bot
 
 
-    @commands.Cog.listener()
+    @commands.Cog.listener()    
     async def on_ready(self):
         print('Bot is online now')
 
