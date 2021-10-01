@@ -6,8 +6,8 @@ class Whois(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(aliases = ['userinfo', 'ui'])
-    async def help(self, ctx, member : discord.Member):
+    @commands.command()
+    async def whois(self, ctx, member : discord.Member):
         h = ctx.author.avatar_url
         pi = member.avatar_url
         roles = [role.mention for role in member.roles]
