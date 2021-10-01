@@ -20,7 +20,7 @@ class Say(commands.Cog):
         await ctx.send(embed = e)
 
     @commands.command()
-    async def say(self, ctx, saymsg = None):
+    async def message(self, ctx, saymsg = None):
         if saymsg == None:
             await ctx.send(f"Please type any message to send{ctx.athour.mention}")
         await ctx.message.delete()
