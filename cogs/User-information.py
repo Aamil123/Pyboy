@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 
-class Whois(commands.Cog):
+class UserInfo(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -16,7 +16,14 @@ class Whois(commands.Cog):
         whoisembed.set_footer(text=f"Requested By: {ctx.author.display_name}.", icon_url=h)
         await ctx.send(embed=whoisembed)
 
+    @commands.command()
+    async def user(self, ctx):
+        pi= ctx.author.avatar_url 
+        roles = [role.mention for role in ctx.author.roles]
+        embed = discord.Embed(title=f"**{ctx.author}**",description=(f"\n\n\n\n**User information**\n\nProfile:{ctx.author.mention}\nID :{ctx.author.id}\nroles :{roles}\n"))
+        embed.set_thumbnail(url=pi)
+        await ctx.send(embed=embed)
 
 
 def setup(bot):
-    bot.add_cog(Whois(bot))
+    bot.add_cog(UserInfo(bot))
