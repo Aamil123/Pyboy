@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-
+import typing as t
 
 class AvatarModify(commands.Cog):
     def __init__(self, bot):
@@ -13,6 +13,14 @@ class AvatarModify(commands.Cog):
         embed.set_image(url = pi)
         embed.set_footer(text=f"Made by {ctx.author.display_name}.", icon_url=pi)
         await ctx.send(embed=embed)
+
+    @commands.command()
+    async def reverse(self, ctx: commands.Context, *, text: t.Optional[str])-> None:
+        if text:
+            await ctx.send(f"> {text[::-1]}")
+            return
+
+    
 
 
 def setup(bot):
