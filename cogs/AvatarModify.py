@@ -13,3 +13,7 @@ class AvatarModify(commands.Cog):
         embed.set_image(url = pi)
         embed.set_footer(text=f"Made by {ctx.author.display_name}.", icon_url=pi)
         await ctx.send(embed=embed)
+
+
+def setup(bot):
+    bot.add_cog(AvatarModify(bot))
