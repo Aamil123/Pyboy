@@ -16,6 +16,12 @@ class ValentineFact(commands.Cog):
         embed = discord.Embed(description = random.choice(valentine_fact))
         await ctx.send(embed=embed)
 
+    @commands.command()
+    async def who_is_valentine(self, ctx):
+        embed = discord.Embed(description = f"""**Who is Saint Valentine?**\n\nSaint Valentine, officially Saint Valentine of Rome, was a widely recognized 3rd-century christian saint, commemorated on February 14. He was a priest and bishop, ministering persecuted Christians in the Roman Empire, and is associated with a tradition of courtly love since the High Middle Ages, a period commenced around the year 1000AD and lasting until around 1250AD. He was martyred and buried at a Christian cemetery on the Via Flaminia on February 14. \n\nThere are a bunch of inconsistencies in the identification of the saint, however there are evidences for 3 saints that appear in connection with February 14. One of them, Saint Valentine of Terni, is believed to be the one associated with a vision restoration miracle, which happening during his imprisonment. In that, he restored the eyesight of his jailer's daughter, and, on the evening before his execution, supposedly sent her a letter signed with 'Your Valentine' (tuum valentinum). This makes this saint the one we today associate with Saint Valentine's Day. \n\nThe artist Cicero Moraes attempted a facial reconstruction of Saint Valentine, which can be seen in the thumbnail.""",color = 0xFF0DC1)
+        embed.set_thumbnail(url = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Saint_Valentine_-_facial_reconstruction.jpg/600px-Saint_Valentine_-_facial_reconstruction.jpg")
+        await ctx.send(embed=embed)
+
 
 def setup(bot):
     bot.add_cog(ValentineFact(bot))
