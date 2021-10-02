@@ -21,4 +21,4 @@ for filename in os.listdir('./cogs'):
 
 
 
-bot.run('ODc3ODc5OTMwNTA2MDU1NzEw.YR5DZQ.dPKJa6kfpbDklWbhhXc4xbOC7qA')
+bot.run('ODc3ODc5OTMwNTA2MDU1NzEw.YR5DZQ.1iR1mGieAloQUbpgqnF2Y4Hb3Go')
