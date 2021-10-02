@@ -15,3 +15,7 @@ class ValentineFact(commands.Cog):
         ]
         embed = discord.Embed(description = random.choice(valentine_fact))
         await ctx.send(embed=embed)
+
+
+def setup(bot):
+    bot.add_cog(ValentineFact(bot))
