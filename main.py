@@ -13,6 +13,7 @@ async def load(ctx, extension):
 async def unloade(ctx, extension):
     bot.unload_extension(f'cogs.{extension}')
 
+#just test
 
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
