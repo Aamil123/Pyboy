@@ -13,7 +13,6 @@ async def load(ctx, extension):
 async def unloade(ctx, extension):
     bot.unload_extension(f'cogs.{extension}')
 
-#just test
 
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
@@ -23,6 +22,6 @@ for filename in os.listdir('./cogs'):
 with open("token.0", "r") as f:
     Token = f.read()
 
-#just test
+
 
 bot.run(Token)
