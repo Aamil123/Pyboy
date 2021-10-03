@@ -23,5 +23,6 @@ for filename in os.listdir('./cogs'):
 with open("token.0", "r") as f:
     Token = f.read()
 
+#just test
 
 bot.run(Token)
