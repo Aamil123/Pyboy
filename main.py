@@ -19,9 +19,5 @@ for filename in os.listdir('./cogs'):
         bot.load_extension(f'cogs.{filename[:-3]}')
 
 
-with open("token.0", "r") as f:
-    Token = f.read()
-
-
 
 bot.run(Token)
