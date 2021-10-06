@@ -20,4 +20,4 @@ for filename in os.listdir('./cogs'):
 
 
 
-bot.run(Token)
+bot.run(token)
