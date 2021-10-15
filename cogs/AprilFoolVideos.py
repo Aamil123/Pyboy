@@ -18,3 +18,4 @@ class Fool(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Fool(bot))
+#test
