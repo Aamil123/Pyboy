@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 import random
-#h
+#hi
 
 class Fool(commands.Cog):
     def __init__(self, bot):
